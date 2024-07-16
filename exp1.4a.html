@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>exp1.4a</title>
+</head>
+<body>
+    <script>
+        var arr=new Array();
+        var i;
+        var limit=prompt("enter the limit");
+        limit=Number(limit);
+        for(i=0;i<limit;i++)
+        {
+            arr[i]=prompt("enter the"+ i +"element :");
+        }
+        for(i in arr)
+        {
+                document.write("arr["+ i +"]="+ arr[i] + "<br>");
+        }
+        </script>
+    </body>
+</html>
