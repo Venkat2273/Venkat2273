@@ -1,0 +1,49 @@
+<html>
+<head><title>Web programming</title>
+<script>
+function myFunction()
+{
+document.getElementById("p1").style.color="blue";
+document.getElementById("p2").style.color="red";
+}
+function Basics()
+{
+document.getElementById("h2").innerHTML="this is inner html";
+var name=document.getElementById("txt_name").value;
+alert("Name is "+name);
+}
+function makeNode()
+{
+var newPara = document.createElement("p");
+var textNode = document.createTextNode("this is a new pargraph.");
+newPara.appendChild(textNode);
+var element=document.getElementById("div1");
+element.appendChild(newPara)
+}
+function isBefore()
+{
+var newNode = document.createElement("h1");
+var textNode=document.createTextNode("inserted before");
+newNode.appendChild(textNode);
+var ins = document.getElementById("div1");
+ins.insertBefore(newNode,ins.children[2]);
+}
+</script>
+</head>
+<body>
+<h2>HELLO Javascript</h2>
+<div id="div1">
+    <h2 id="h2"></h2>
+<p id="p1">Hello i am dinesh (it is paragraph one)</p>
+<p id="p2">Hello i am dinesh (it is paragraph two)</p>
+</div>
+<div>
+<label>ADD A NEW ELEMENT</label>
+<input type="text" id="txt_name">
+<button type="button" onclick="Basics()">INNER HTML</button>
+<button type="button" onclick="myFunction()">SET COLOR</button>
+<button type="button" onclick="makeNode()">AFTER</button>
+<button type="button" onclick="isBefore()">BEFORE</button>
+</div>
+</body>
+</html>
